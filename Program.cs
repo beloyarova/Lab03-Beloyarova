@@ -1,7 +1,4 @@
-﻿using System.Diagnostics;
-using System.IO.Compression;
-
-Console.WriteLine("Банковский счёТ");
+﻿Console.WriteLine("Банковский счёТ");
 
 double balance = 1000;
 Console.WriteLine($"Начальный баланс: {balance}");
