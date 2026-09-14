@@ -1,4 +1,4 @@
-﻿Console.WriteLine("Банковский счёТ");
+﻿Console.WriteLine("Банковский счёт");
 
 double balance = 1000;
 Console.WriteLine($"Начальный баланс: {balance}");
