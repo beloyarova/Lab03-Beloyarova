@@ -1,4 +1,7 @@
-﻿Console.WriteLine("Банковский счёТ");
+﻿using System.Diagnostics;
+using System.IO.Compression;
+
+Console.WriteLine("Банковский счёТ");
 
 double balance = 1000;
 Console.WriteLine($"Начальный баланс: {balance}");
@@ -124,7 +127,7 @@ Console.WriteLine($"Проходит по правилам: {isEligibleByRules}"
 Console.WriteLine($"Итоговый балл: {totalScore}");
 
 Console.WriteLine();
-Console.WriteLine("Чётное или нечётное—без if");
+Console.WriteLine("Чётное или нечётное — без if");
 Console.Write("Введите целое число: ");
 int number = int.Parse(Console.ReadLine());
 
@@ -145,3 +148,27 @@ Console.WriteLine($"result2 = {result2}, x = {x}"); // используется 
 
 int result3 = x++ + 10; // используется 9, затем x увеличивается до 10
 Console.WriteLine($"result3 = {result3}, x = {x}");
+
+Console.WriteLine();
+Console.WriteLine("Калькулятор скидки с несколькими условиями");
+
+Console.WriteLine();
+Console.Write("Введите сумму покупки: ");
+double summa = double.Parse(Console.ReadLine());
+
+Console.Write("Есть карта постоянного клиента? (1 - да, 0 - нет): ");
+int card = int.Parse(Console.ReadLine());
+bool hasCard = (card == 1);
+
+Console.Write("Введите количество товаров: ");
+int quantity = int.Parse(Console.ReadLine());
+
+bool summaBuy = summa >= 3000;
+bool product = quantity >= 3;
+bool eligibleForDiscount = (summaBuy && product) || hasCard;
+
+Console.WriteLine();
+Console.WriteLine($"Сумма >= 3000: {summaBuy}");
+Console.WriteLine($"Товаров >= 3: {product}");
+Console.WriteLine($"Есть карта: {hasCard}");
+Console.WriteLine($"Скидка: {eligibleForDiscount}");
