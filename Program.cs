@@ -98,7 +98,7 @@ Console.WriteLine($"(5>3 && 2<4) || false  = {logicResultParens}");
 Console.WriteLine();
 Console.WriteLine("Приемная комиссия");
 
-Console.Write("Введите средний балл аттертата: ");
+Console.Write("Введите средний балл аттестата: ");
 double averageGrade = double.Parse(Console.ReadLine());
 
 Console.Write("Введите баллы за экзамен (0-100): ");
@@ -124,9 +124,24 @@ Console.WriteLine($"Проходит по правилам: {isEligibleByRules}"
 Console.WriteLine($"Итоговый балл: {totalScore}");
 
 Console.WriteLine();
+Console.WriteLine("Чётное или нечётное—без if");
 Console.Write("Введите целое число: ");
 int number = int.Parse(Console.ReadLine());
 
 bool isEven = number % 2 == 0;
 
 Console.WriteLine($"Число четное: {isEven}");
+
+Console.WriteLine();
+Console.WriteLine("Инкремент в выражении");
+
+int x = 7;
+
+int result1 = x++; // используется старое значение 7
+Console.WriteLine($"result1 = {result1}, x = {x}"); // x увеличивается до 8 
+
+int result2 = ++x; // x увеличивается до 9
+Console.WriteLine($"result2 = {result2}, x = {x}"); // используется новое значение 9
+
+int result3 = x++ + 10; // используется 9, затем x увеличивается до 10
+Console.WriteLine($"result3 = {result3}, x = {x}");
